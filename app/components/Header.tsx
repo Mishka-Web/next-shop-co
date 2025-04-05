@@ -53,13 +53,13 @@ export default function Header() {
 							<ul className="flex items-center gap-6">
 								{navLinks.map(({ label, href, submenu }) => (
 									<li key={label} className="relative">
-										<Link href={href} className="inline-flex relative text-base">{label}</Link>
+										<Link href={href} className="inline-flex relative text-base hover:underline">{label}</Link>
 										{submenu && submenu.length > 0 && (
 											<div className="absolute top-full left-0 w-full bg-white text-black p-6 hidden">
 												<ul className="flex flex-col gap-4">
 													{submenu.map(({ label, href }) => (
 														<li key={label}>
-															<Link href={href} className="inline-flex relative text-base">{label}</Link>
+															<Link href={href} className="inline-flex relative text-base hover:underline">{label}</Link>
 														</li>
 													))}
 												</ul>
