@@ -1,23 +1,24 @@
-import clsx from "clsx";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 export interface ICard {
 	id: number;
-	image: StaticImageData;
-	title: string;
-	price: string;
-	sale?: string;
-	rate: string;
+	imageUrl: string;
+	description: string;
+	name: string;
+	price: number;
+	sale?: number;
+	rate: number;
 }
 
-export default function Card({ image, title, price, rate, sale }: ICard, className?: string) {
+export default function Card({ imageUrl, name, price, rate, sale }: ICard, className?: string) {
 	return (
-		<article className={clsx("flex flex-col gap-2 bg-white", className)}>
+		<article className={cn("flex flex-col gap-2 bg-white", className)}>
 			<Link className="flex rounded-[20px] overflow-hidden" href="/">
-				<Image className="pointer-events-none select-none object-cover w-full h-full max-h-[298px]" src={image} alt="" />
+				<Image className="pointer-events-none select-none object-cover w-full h-full max-h-[298px]" src={imageUrl} width={298} height={298} alt="" />
 			</Link>
-			<h4 className="mt-2 font-bold text-[20px]">{title}</h4>
+			<h4 className="mt-2 font-bold text-[20px]">{name}</h4>
 			<div className="flex items-center gap-[13px]">
 				<div className="flex items-center gap-[5.3px]">
 					<Image src="/images/icons/star.svg" width={18.5} height={18.5} alt="star" />

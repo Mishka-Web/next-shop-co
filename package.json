@@ -2,19 +2,27 @@
 	"name": "next-e-commerce",
 	"version": "0.1.0",
 	"private": true,
+	"prisma": {
+		"schema": "./app/prisma/schema.prisma",
+		"seed": "./app/prisma/seed.ts"
+	},
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
 		"prisma:push": "prisma db push",
-		"prisma:studio": "prisma studio"
+		"prisma:studio": "prisma studio",
+		"prisma:seed": "prisma db seed"
 	},
 	"dependencies": {
 		"@headlessui/react": "^2.2.0",
 		"@prisma/client": "^6.5.0",
 		"@prisma/extension-accelerate": "^1.3.0",
 		"@radix-ui/react-slot": "^1.1.2",
+		"@types/bcrypt": "^5.0.2",
+		"axios": "^1.8.4",
+		"bcrypt": "^5.1.1",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"lucide-react": "^0.487.0",
@@ -23,12 +31,13 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"tailwind-merge": "^3.1.0",
-		"tw-animate-css": "^1.2.5"
+		"tw-animate-css": "^1.2.5",
+		"zustand": "^5.0.3"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4.0.17",
-		"@types/node": "^20",
+		"@types/node": "^20.17.30",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"autoprefixer": "^10.4.21",
@@ -36,9 +45,7 @@
 		"eslint-config-next": "15.2.4",
 		"postcss": "^8.5.3",
 		"tailwindcss": "^4.0.17",
-		"typescript": "^5"
-	},
-	"prisma": {
-		"schema": "./app/prisma/schema.prisma"
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
 	}
 }

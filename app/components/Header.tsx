@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "./Wrapper";
-import Search from "./Search";
+import { Search } from "./shared/search-input";
 
 const navLinks = [
 	{

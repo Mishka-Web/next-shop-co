@@ -1,6 +1,7 @@
 import Wrapper from "./Wrapper";
 import { Button } from "@/components/ui/button"
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Intro() {
 	return (
@@ -15,7 +16,7 @@ export default function Intro() {
 							FIND CLOTHES THAT MATCHES YOUR STYLE
 						</h2>
 						<p className="max-w-[545px] text-[rgba(0,0,0,0.6)] leading-[22px]">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
-						<Button className="min-w-[210px]">Shop Now</Button>
+						<Link href="/shop" className="inline-flex"><Button className="min-w-[210px]">Shop Now</Button></Link>
 					</div>
 					<div className="flex items-center gap-8 mt-12">
 						<div className="flex flex-col">
